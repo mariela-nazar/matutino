@@ -8,7 +8,7 @@
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
@@ -24,9 +24,9 @@
 
   <!-- NAVEGACIÓN -->
   <nav class="main-nav">
-    <a href="#">Despensa mínima</a>
-    <a href="#">Intemperie interior</a>
-    <a href="#">Matutino</a>
+    <a href="#despensa">Despensa mínima</a>
+    <a href="#intemperie">Intemperie interior</a>
+    <a href="#matutino">Matutino</a>
   </nav>
 
   <!-- CONTENIDO -->
@@ -35,22 +35,22 @@
     <!-- COLUMNA IZQUIERDA -->
     <section class="left-column">
 
-      <article class="box">
+      <article class="box" id="despensa">
         <h2>Despensa mínima</h2>
         <p>
           Texto breve, contenido, que se deja leer sin agotarse.
           Un fragmento alcanza para abrir la puerta.
         </p>
-        <a href="#" class="read-more">Seguir leyendo</a>
+        <a href="#" class="read-more">Seguir leyendo →</a>
       </article>
 
-      <article class="box">
+      <article class="box" id="intemperie">
         <h2>Intemperie interior</h2>
         <p>
           Escritura abierta. Observación, deriva, prosa o poesía.
           Apenas lo suficiente para invitar a entrar.
         </p>
-        <a href="#" class="read-more">Seguir leyendo</a>
+        <a href="#" class="read-more">Seguir leyendo →</a>
       </article>
 
     </section>
@@ -58,16 +58,21 @@
     <!-- COLUMNA DERECHA -->
     <section class="right-column">
 
-      <article class="matutino">
-        <h2>MATUTINO | Claves del día · 23/01/2026</h2>
+      <article class="matutino" id="matutino">
+        <h2>MATUTINO | Claves del día · 26/01/2026</h2>
         <p>
-          Este es el Matutino del día. Se ve completo.
-          No hay corte. No hay teaser.
+          Análisis diario de contexto global, nacional y provincial.
+          Información seleccionada y jerarquizada para comprender qué pasa y por qué importa.
         </p>
         <p>
-          El texto empuja la página hacia abajo si hace falta.
-          Acá está el centro de gravedad.
+          Estructura fija: 3 puntos internacionales, 3 nacionales, 3 provinciales y 1 clave del día.
+          Extensión total: 230-280 palabras. Tono sobrio, claro, informativo.
         </p>
+        <p>
+          Hoy: Banco Mundial ajusta proyecciones, inflación estimada en 2.0% para enero,
+          Legislatura bonaerense aprueba presupuesto 2026.
+        </p>
+        <a href="#" class="read-more">Ver edición completa →</a>
       </article>
 
     </section>
@@ -76,7 +81,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>SINTEX · Deriva archivada</p>
+    <p>SINTEX · Deriva archivada · 2026</p>
   </footer>
 
 </body>

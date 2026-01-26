@@ -251,6 +251,121 @@ body {
     font-size: 0.95rem;
     line-height: 1.7;
   }
+
+/* ===== ESTILOS PARA PÁGINAS DE NOTAS ===== */
+.nota-page {
+  background-color: #f6f6f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.nota-header {
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nota-logo {
+  margin-bottom: 1rem;
+}
+
+.nota-nav {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nota-nav a {
+  color: #006666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nota-nav a:hover {
+  text-decoration: underline;
+}
+
+.nota-contenido {
+  flex: 1;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.nota-articulo {
+  background: white;
+  padding: 3rem;
+  border-radius: 4px;
+  border-left: 4px solid #990033;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.nota-encabezado h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.nota-metadata {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nota-fecha,
+.nota-autor,
+.nota-seccion {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.nota-cuerpo {
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.nota-cuerpo p {
+  margin-bottom: 1.5rem;
+}
+
+.nota-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nota-volver {
+  color: #990033;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nota-volver:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nota-contenido {
+    padding: 1rem;
+  }
+  
+  .nota-articulo {
+    padding: 2rem;
+  }
+  
+  .nota-encabezado h1 {
+    font-size: 1.6rem;
+  }
+}
+
 
 

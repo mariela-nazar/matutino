@@ -100,9 +100,9 @@ body {
   background: #ffffff;
   padding: 1.8rem;
   margin-bottom: 1.8rem;
-  margin-top: 0; /* Elimina cualquier margen residual superior */
+  margin-top: 0;
   border-radius: 4px;
-  border-left: 4px solid #006666; /* CAMBIADO: #0E4196 → #006666 */
+  border-left: 4px solid #006666;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: transform 0.3s;
 }
@@ -128,25 +128,24 @@ body {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: #006666; /* CAMBIADO para coincidir con el borde */
+  color: #006666;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .read-more:hover {
-  color: #004d4d; /* VERDE MÁS OSCURO EN HOVER */
+  color: #004d4d;
 }
 
-/* COLUMNA DERECHA - MATUTINO (CON PADDING SUPERIOR REDUCIDO) */
+/* COLUMNA DERECHA - MATUTINO */
 .matutino {
-  background: #ffffff !important; /* SOLO AÑADIR !important */
-  /* Reducimos el padding superior de 3rem a 1.5rem */
+  background: #ffffff;
   padding: 1.5rem 3rem 3rem 3rem;
   border-radius: 2px;
   border-top: 4px solid #990033;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-  margin-top: 0; /* Asegura alineación superior */
+  margin-top: 0;
 }
 
 .matutino h2 {
@@ -161,11 +160,12 @@ body {
   padding-bottom: 12px;
 }
 
-.matutino p {
-  color: #3e4f5f;
-  margin-bottom: 1.2rem;
-  font-size: 1.08rem;
-  line-height: 1.8;
+/* ===== TIPOGRAFÍA IGUALADA ===== */
+.matutino > div > p {
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -199,60 +199,54 @@ body {
   color: #7f8c8d;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE - MÓVILES (Matutino primero) ===== */
 @media (max-width: 768px) {
   .layout {
+    /* Cambia el orden: segunda columna primero (Matutino) */
     grid-template-columns: 1fr;
+    grid-template-areas: 
+      "matutino"
+      "contenido";
     gap: 1.5rem;
     padding: 1rem 1.5rem 2rem 1.5rem;
   }
-  
+
+  /* Asigna áreas a las columnas */
+  .right-column {
+    grid-area: matutino;
+  }
+
+  .left-column {
+    grid-area: contenido;
+  }
+
   .site-header {
     padding: 2rem 1rem 1rem 1rem;
   }
-  
+
   .logo {
     font-size: 3.5rem;
   }
-  
+
   .main-nav a {
     margin: 0 0.8rem;
     font-size: 0.85rem;
   }
-  
+
   .matutino {
     padding: 1.5rem 2rem 2.5rem 2rem;
   }
-  
+
   .matutino h2 {
     font-size: 1rem;
     letter-spacing: 0.08em;
   }
-  
-  .matutino p {
-    font-size: 1.05rem;
+
+  /* Mantener tipografía igualada en móviles */
+  .matutino > div > p {
+    font-size: 0.95rem;
     line-height: 1.7;
   }
-
-  /* ===== FORZAR TEXTO IGUAL ===== */
-
-/* BUSCAR TODOS LOS PÁRRAFOS DENTRO DE MATUTINO */
-.matutino p:not(:first-child):not(.read-more) {
-  color: #34495e !important;
-  font-size: 0.95rem !important;
-  line-height: 1.7 !important;
-  font-family: 'Inter', sans-serif !important;
-  margin-bottom: 1rem !important;
-  font-weight: 400 !important;
-}
-
-/* O usar selector más específico */
-article#matutino .clave-seccion p,
-article#matutino .matutino-contenido {
-  color: #34495e !important;
-  font-size: 0.95rem !important;
-  line-height: 1.7 !important;
-  font-family: 'Inter', sans-serif !important;
 }
 
 

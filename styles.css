@@ -7,66 +7,72 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-  color: #2c3e50;
-  line-height: 1.7;
+  background-color: #f6f6f4;
+  color: #2b2b2b;
+  line-height: 1.6;
   min-height: 100vh;
 }
 
-/* HEADER CON FONDO OSCURO */
+/* HEADER SIN FONDO OSCURO */
 .site-header {
-  padding: 3rem 2rem 1.5rem;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2.5rem 2rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.header-content {
+  margin-bottom: 1.5rem;
+}
+
+/* LOGO CON BODONI MODA */
 .logo {
-  font-weight: 300;
-  letter-spacing: 0.35em;
-  font-size: 2.2rem;
-  color: #ecf0f1;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-.tagline {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #7f8c8d;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
+  letter-spacing: 0.25em;
+  font-size: 2.8rem;
+  color: #2c3e50; /* Gris oscuro */
+  margin-bottom: 0.3rem;
 }
 
-/* NAVEGACIÓN CON COLOR */
+/* TAGLINE */
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #7f8c8d; /* Gris más claro */
+  letter-spacing: 0.05em;
+}
+
+/* NAVEGACIÓN CENTRADA */
 .main-nav {
-  padding: 0 2rem 2.5rem;
-  background-color: #34495e;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .main-nav a {
-  margin-right: 2rem;
+  margin: 0 1.2rem;
   text-decoration: none;
   font-size: 0.9rem;
-  color: #bdc3c7;
+  color: #4a5f5a;
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s;
 }
 
 .main-nav a:hover {
-  color: #3498db;
+  color: #2c3e50;
 }
 
 .main-nav a::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #3498db;
+  background-color: #2c3e50;
   transition: width 0.3s;
 }
 
@@ -74,30 +80,29 @@ body {
   width: 100%;
 }
 
-/* LAYOUT */
+/* LAYOUT - REDUCIENDO ESPACIO BLANCO */
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2.5rem;
-  padding: 0 2rem 3rem;
+  gap: 2rem;
+  padding: 1.5rem 2rem 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* COLUMNA IZQUIERDA - TARJETAS CON COLOR */
+/* COLUMNA IZQUIERDA - SUBIDA */
 .left-column .box {
-  background: white;
+  background: #ffffff;
   padding: 1.8rem;
   margin-bottom: 1.8rem;
-  border-radius: 8px;
-  border-left: 4px solid #27ae60; /* VERDE OPACO */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 4px;
+  border-left: 4px solid #009966; /* VERDE SOLICITADO */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.3s;
 }
 
 .left-column .box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 
 .left-column h2 {
@@ -110,68 +115,67 @@ body {
 .left-column p {
   color: #34495e;
   font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .read-more {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: #2980b9; /* AZUL */
+  color: #3f5f7a;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.3rem 0;
-  border-bottom: 1px dashed #2980b9;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 .read-more:hover {
-  color: #3498db;
-  border-bottom: 1px solid #3498db;
-  padding-left: 0.5rem;
+  color: #2c3e50;
 }
 
-/* COLUMNA DERECHA - MATUTINO CON DESTAQUE */
+/* COLUMNA DERECHA - MATUTINO */
 .matutino {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: #ffffff;
   padding: 2.5rem;
-  border-radius: 8px;
-  border-top: 5px solid #e74c3c; /* ACENTO ROJO OSCURO */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  border-top: 4px solid #990033; /* ACENTO MATUTINO SOLICITADO */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .matutino h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
   color: #2c3e50;
-  border-bottom: 1px solid #ecf0f1;
-  padding-bottom: 0.8rem;
 }
 
 .matutino p {
   color: #34495e;
   margin-bottom: 1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.matutino p:first-of-type {
-  font-weight: 500;
-  color: #2c3e50;
+.matutino .read-more {
+  margin-top: 1.5rem;
+  color: #990033;
 }
 
-/* FOOTER CON COLOR */
+.matutino .read-more:hover {
+  color: #cc0033;
+}
+
+/* FOOTER SIN FONDO OSCURO */
 .site-footer {
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   font-size: 0.8rem;
   color: #7f8c8d;
-  background-color: #2c3e50;
   text-align: center;
-  margin-top: 3rem;
-  border-top: 1px solid #34495e;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #f6f6f4;
 }
 
 .site-footer p {
-  color: #bdc3c7;
+  color: #7f8c8d;
 }
 
 /* RESPONSIVE */
@@ -179,19 +183,23 @@ body {
   .layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem 2rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
   }
   
   .site-header {
-    padding: 2rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
   
-  .main-nav {
-    padding: 0 1rem 1.5rem;
+  .logo {
+    font-size: 2.2rem;
   }
   
   .main-nav a {
-    display: block;
-    margin: 0.5rem 0;
+    margin: 0 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .matutino {
+    padding: 1.8rem;
   }
 }

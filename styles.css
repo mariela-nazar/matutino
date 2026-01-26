@@ -233,7 +233,28 @@ body {
     font-size: 1.05rem;
     line-height: 1.7;
   }
+
+  /* ===== FORZAR TEXTO IGUAL ===== */
+
+/* BUSCAR TODOS LOS PÁRRAFOS DENTRO DE MATUTINO */
+.matutino p:not(:first-child):not(.read-more) {
+  color: #34495e !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  font-family: 'Inter', sans-serif !important;
+  margin-bottom: 1rem !important;
+  font-weight: 400 !important;
 }
+
+/* O usar selector más específico */
+article#matutino .clave-seccion p,
+article#matutino .matutino-contenido {
+  color: #34495e !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
 
 
 

@@ -124,6 +124,16 @@ body {
   line-height: 1.7;
 }
 
+/* ===== TÍTULOS PARA ESCRITOS EN COLUMNA IZQUIERDA ===== */
+.left-column .box h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
 .read-more {
   display: inline-block;
   margin-top: 1rem;
@@ -266,6 +276,7 @@ body {
     line-height: 1.7;
   }
 }
+
 
 
 

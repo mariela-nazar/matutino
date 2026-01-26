@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -10,64 +10,66 @@ body {
   background-color: #f6f6f4;
   color: #2b2b2b;
   line-height: 1.6;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased; /* Mejora general de nitidez */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER - ESTRUCTURA Y JERARQUÍA */
+/* CABECERA Y LOGOTIPO */
 .site-header {
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding: 3.5rem 2rem 1.5rem 2rem;
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* LOGO: Alice en minúsculas, gris claro y cohesionado */
 .logo {
   font-family: 'Alice', serif;
-  font-size: 54px; /* Aumentado para presencia de marca */
-  color: #7a7a7a; /* Gris claro que no mancha */
+  font-size: 56px; /* Aumentado para que no se vea chiquito */
+  color: #707070; /* Gris medio-claro que no mancha */
   text-transform: lowercase;
-  letter-spacing: -0.02em; /* Letras más juntas para unidad de logo */
+  letter-spacing: -0.03em; /* Letras juntas para que parezca un logo sólido */
   font-weight: 400;
   display: block;
-  margin-bottom: 0px;
-  line-height: 1;
+  line-height: 0.9;
+  margin-bottom: 5px;
 }
 
-/* TAGLINE: Subtítulo en Inter con aire técnico */
 .tagline {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 0.85rem;
   color: #a0a0a0;
-  letter-spacing: 0.12em; /* Espaciado abierto para contraste editorial */
-  margin-top: 8px;
-  display: block;
+  letter-spacing: 0.15em; /* Contraste técnico con el logo */
+  text-transform: none;
 }
 
-/* NAVEGACIÓN: Más minimalista y equilibrada */
+/* NAVEGACIÓN */
 .main-nav {
   padding: 1.2rem 0;
-  margin-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .main-nav a {
-  margin: 0 1.5rem;
+  margin: 0 1.2rem;
   text-decoration: none;
   font-size: 0.85rem;
-  color: #667c77; /* Tono suave acorde al gris */
-  font-weight: 400;
-  letter-spacing: 0.03em;
+  color: #5a6b67;
+  letter-spacing: 0.02em;
   transition: color 0.3s;
 }
 
-.main-nav a:hover {
-  color: #2c3e50;
+.main-nav a:hover { color: #2c3e50; }
+
+/* CUERPO DE PÁGINA Y SECCIÓN MATUTINO */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* COLUMNA DERECHA - MATUTINO (REFRESCADO) */
 .matutino {
   background: #ffffff;
   padding: 3rem;
@@ -76,51 +78,29 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
-/* Título MATUTINO con jerarquía clara */
+/* Estilo para MATUTINO | Claves del día */
 .matutino h2 {
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase; /* Para diferenciarlo del logo */
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
   color: #444;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
 }
 
 .matutino p {
   color: #3e4f5f;
   margin-bottom: 1.2rem;
-  font-size: 1.05rem;
-  line-height: 1.75; /* Más espacio para lectura cómoda */
-}
-
-/* Enlace de lectura con acento sobrio */
-.matutino .read-more {
-  margin-top: 1rem;
-  color: #990033;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border 0.3s;
-}
-
-.matutino .read-more:hover {
-  border-bottom: 1px solid #990033;
-}
-
-/* FOOTER */
-.site-footer {
-  padding: 2rem;
-  font-size: 0.75rem;
-  color: #999;
-  text-align: center;
-  background-color: #f6f6f4;
+  font-size: 1.08rem; /* Un poco más grande para lectura premium */
+  line-height: 1.8; /* Espaciado aéreo para evitar fatiga visual */
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .logo { font-size: 40px; }
-  .layout { grid-template-columns: 1fr; padding: 1rem; }
-  .matutino { padding: 2rem; }
-  .main-nav a { margin: 0 0.6rem; font-size: 0.8rem; }
+  .logo { font-size: 42px; }
+  .layout { grid-template-columns: 1fr; }
+  .site-header { padding-top: 2rem; }
 }

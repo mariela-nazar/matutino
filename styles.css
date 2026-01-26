@@ -233,4 +233,19 @@ body {
     font-size: 1.05rem;
     line-height: 1.7;
   }
+
+/* MOBILE FIRST: Matutino primero */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .right-column {
+    order: 1;
+  }
+
+  .left-column {
+    order: 2;
+  }
 }
+

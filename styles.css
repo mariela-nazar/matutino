@@ -98,7 +98,7 @@ body {
   padding: 1.8rem;
   margin-bottom: 1.8rem;
   border-radius: 4px;
-  border-left: 4px solid #009966; /* VERDE SOLICITADO */
+  border-left: 4px solid #006666; /* VERDE SOLICITADO */
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: transform 0.3s;
 }
@@ -205,4 +205,5 @@ body {
     padding: 1.8rem;
   }
 }
+
 

@@ -1,4 +1,4 @@
-/* RESET GENERAL */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,41 +10,43 @@ body {
   background-color: #f6f6f4;
   color: #2b2b2b;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
-/* CABECERA Y LOGOTIPO */
+/* HEADER SIN FONDO OSCURO */
 .site-header {
-  padding: 3.5rem 2rem 1.5rem 2rem;
+  padding: 2.5rem 2rem 1rem 2rem;
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  font-family: 'Alice', serif;
-  font-size: 56px; /* Aumentado para que no se vea chiquito */
-  color: #707070; /* Gris medio-claro que no mancha */
-  text-transform: lowercase;
-  letter-spacing: -0.03em; /* Letras juntas para que parezca un logo sólido */
-  font-weight: 400;
-  display: block;
-  line-height: 0.9;
-  margin-bottom: 5px;
+.header-content {
+  margin-bottom: 1.5rem;
 }
 
+/* LOGO CON BODONI MODA */
+.logo {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  font-size: 2.8rem;
+  color: #2c3e50; /* Gris oscuro */
+  margin-bottom: 0.3rem;
+}
+
+/* TAGLINE */
 .tagline {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 0.85rem;
-  color: #a0a0a0;
-  letter-spacing: 0.15em; /* Contraste técnico con el logo */
-  text-transform: none;
+  font-size: 0.95rem;
+  color: #7f8c8d; /* Gris más claro */
+  letter-spacing: 0.05em;
 }
 
-/* NAVEGACIÓN */
+/* NAVEGACIÓN CENTRADA */
 .main-nav {
-  padding: 1.2rem 0;
-  margin-top: 1.5rem;
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -52,55 +54,152 @@ body {
 .main-nav a {
   margin: 0 1.2rem;
   text-decoration: none;
-  font-size: 0.85rem;
-  color: #5a6b67;
-  letter-spacing: 0.02em;
+  font-size: 0.9rem;
+  color: #4a5f5a;
+  padding: 0.5rem 0;
+  position: relative;
   transition: color 0.3s;
 }
 
-.main-nav a:hover { color: #2c3e50; }
+.main-nav a:hover {
+  color: #2c3e50;
+}
 
-/* CUERPO DE PÁGINA Y SECCIÓN MATUTINO */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #2c3e50;
+  transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* LAYOUT - REDUCIENDO ESPACIO BLANCO */
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2.5rem;
-  padding: 2.5rem 2rem;
+  gap: 2rem;
+  padding: 1.5rem 2rem 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.matutino {
+/* COLUMNA IZQUIERDA - SUBIDA */
+.left-column .box {
   background: #ffffff;
-  padding: 3rem;
-  border-radius: 2px;
-  border-top: 4px solid #990033;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-radius: 4px;
+  border-left: 4px solid #009966; /* VERDE SOLICITADO */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.3s;
 }
 
-/* Estilo para MATUTINO | Claves del día */
-.matutino h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.05rem;
+.left-column .box:hover {
+  transform: translateY(-2px);
+}
+
+.left-column h2 {
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1.8rem;
-  color: #444;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 10px;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.left-column p {
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #3f5f7a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: #2c3e50;
+}
+
+/* COLUMNA DERECHA - MATUTINO */
+.matutino {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 4px;
+  border-top: 4px solid #990033; /* ACENTO MATUTINO SOLICITADO */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.matutino h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
 }
 
 .matutino p {
-  color: #3e4f5f;
-  margin-bottom: 1.2rem;
-  font-size: 1.08rem; /* Un poco más grande para lectura premium */
-  line-height: 1.8; /* Espaciado aéreo para evitar fatiga visual */
+  color: #34495e;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.matutino .read-more {
+  margin-top: 1.5rem;
+  color: #990033;
+}
+
+.matutino .read-more:hover {
+  color: #cc0033;
+}
+
+/* FOOTER SIN FONDO OSCURO */
+.site-footer {
+  padding: 1.5rem 2rem;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #f6f6f4;
+}
+
+.site-footer p {
+  color: #7f8c8d;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .logo { font-size: 42px; }
-  .layout { grid-template-columns: 1fr; }
-  .site-header { padding-top: 2rem; }
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+  
+  .site-header {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+  }
+  
+  .main-nav a {
+    margin: 0 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .matutino {
+    padding: 1.8rem;
+  }
 }

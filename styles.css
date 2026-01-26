@@ -11,61 +11,55 @@ body {
   color: #2b2b2b;
   line-height: 1.6;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* Mejora general de nitidez */
 }
 
-/* HEADER SIN FONDO OSCURO */
+/* HEADER - ESTRUCTURA Y JERARQUÍA */
 .site-header {
-  padding: 2.5rem 2rem 1rem 2rem;
+  padding: 3rem 2rem 1.5rem 2rem;
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.header-content {
-  margin-bottom: 1.5rem;
-}
-
-/* LOGO CON BODONI MODA */
+/* LOGO: Alice en minúsculas, gris claro y cohesionado */
 .logo {
   font-family: 'Alice', serif;
-  /* Aumentamos a 48px para que tenga presencia de marca */
-  font-size: 48px; 
-  /* Gris claro que no mancha, pero con cuerpo */
-  color: #808080; 
+  font-size: 54px; /* Aumentado para presencia de marca */
+  color: #7a7a7a; /* Gris claro que no mancha */
   text-transform: lowercase;
-  /* Reducimos el espacio: esto une la palabra y la hace ver moderna */
-  letter-spacing: -0.01em; 
+  letter-spacing: -0.02em; /* Letras más juntas para unidad de logo */
   font-weight: 400;
   display: block;
-  margin-bottom: 2px;
-  /* Suavizado para que los remates se vean nítidos */
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.1;
+  margin-bottom: 0px;
+  line-height: 1;
 }
 
-/* TAGLINE */
+/* TAGLINE: Subtítulo en Inter con aire técnico */
 .tagline {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 0.95rem;
-  color: #7f8c8d; /* Gris más claro */
-  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  letter-spacing: 0.12em; /* Espaciado abierto para contraste editorial */
+  margin-top: 8px;
+  display: block;
 }
 
-/* NAVEGACIÓN CENTRADA */
+/* NAVEGACIÓN: Más minimalista y equilibrada */
 .main-nav {
-  padding: 0.8rem 0;
-  margin-top: 0.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .main-nav a {
-  margin: 0 1.2rem;
+  margin: 0 1.5rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  color: #4a5f5a;
-  padding: 0.5rem 0;
-  position: relative;
+  font-size: 0.85rem;
+  color: #667c77; /* Tono suave acorde al gris */
+  font-weight: 400;
+  letter-spacing: 0.03em;
   transition: color 0.3s;
 }
 
@@ -73,145 +67,60 @@ body {
   color: #2c3e50;
 }
 
-.main-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #2c3e50;
-  transition: width 0.3s;
-}
-
-.main-nav a:hover::after {
-  width: 100%;
-}
-
-/* LAYOUT - REDUCIENDO ESPACIO BLANCO */
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  padding: 1.5rem 2rem 3rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* COLUMNA IZQUIERDA - SUBIDA */
-.left-column .box {
-  background: #ffffff;
-  padding: 1.8rem;
-  margin-bottom: 1.8rem;
-  border-radius: 4px;
-  border-left: 4px solid #006666; /* VERDE SOLICITADO */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.3s;
-}
-
-.left-column .box:hover {
-  transform: translateY(-2px);
-}
-
-.left-column h2 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-  color: #2c3e50;
-}
-
-.left-column p {
-  color: #34495e;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #3f5f7a;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.read-more:hover {
-  color: #2c3e50;
-}
-
-/* COLUMNA DERECHA - MATUTINO */
+/* COLUMNA DERECHA - MATUTINO (REFRESCADO) */
 .matutino {
   background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 4px;
-  border-top: 4px solid #990033; /* ACENTO MATUTINO SOLICITADO */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 3rem;
+  border-radius: 2px;
+  border-top: 4px solid #990033;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
+/* Título MATUTINO con jerarquía clara */
 .matutino h2 {
-  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
   font-weight: 500;
-  margin-bottom: 1.2rem;
-  color: #2c3e50;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; /* Para diferenciarlo del logo */
+  margin-bottom: 1.5rem;
+  color: #444;
 }
 
 .matutino p {
-  color: #34495e;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.7;
+  color: #3e4f5f;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.75; /* Más espacio para lectura cómoda */
 }
 
+/* Enlace de lectura con acento sobrio */
 .matutino .read-more {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   color: #990033;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
 }
 
 .matutino .read-more:hover {
-  color: #cc0033;
+  border-bottom: 1px solid #990033;
 }
 
-/* FOOTER SIN FONDO OSCURO */
+/* FOOTER */
 .site-footer {
-  padding: 1.5rem 2rem;
-  font-size: 0.8rem;
-  color: #7f8c8d;
+  padding: 2rem;
+  font-size: 0.75rem;
+  color: #999;
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
   background-color: #f6f6f4;
-}
-
-.site-footer p {
-  color: #7f8c8d;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem 2rem 1.5rem;
-  }
-  
-  .site-header {
-    padding: 2rem 1rem 1rem 1rem;
-  }
-  
-  .logo {
-    font-size: 2.2rem;
-  }
-  
-  .main-nav a {
-    margin: 0 0.8rem;
-    font-size: 0.85rem;
-  }
-  
-  .matutino {
-    padding: 1.8rem;
-  }
+  .logo { font-size: 40px; }
+  .layout { grid-template-columns: 1fr; padding: 1rem; }
+  .matutino { padding: 2rem; }
+  .main-nav a { margin: 0 0.6rem; font-size: 0.8rem; }
 }
-
-
-
-

@@ -140,7 +140,7 @@ body {
 
 /* COLUMNA DERECHA - MATUTINO (CON PADDING SUPERIOR REDUCIDO) */
 .matutino {
-  background: #ffffff;
+  background: #ffffff !important; /* SOLO AÑADIR !important */
   /* Reducimos el padding superior de 3rem a 1.5rem */
   padding: 1.5rem 3rem 3rem 3rem;
   border-radius: 2px;
@@ -234,6 +234,7 @@ body {
     line-height: 1.7;
   }
 }
+
 
 
 

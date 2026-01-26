@@ -27,16 +27,19 @@ body {
 /* LOGO CON BODONI MODA */
 .logo {
   font-family: 'Alice', serif;
-  /* 40px es un tamaño estándar elegante para logos en cabecera */
-  font-size: 40px; 
-  color: #707070; 
+  /* Aumentamos a 48px para que tenga presencia de marca */
+  font-size: 48px; 
+  /* Gris claro que no mancha, pero con cuerpo */
+  color: #808080; 
   text-transform: lowercase;
-  /* El espaciado positivo (0.05em) quita lo 'antiguo' y da aire moderno */
-  letter-spacing: 0.05em; 
+  /* Reducimos el espacio: esto une la palabra y la hace ver moderna */
+  letter-spacing: -0.01em; 
   font-weight: 400;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  /* Suavizado para que los remates se vean nítidos */
   -webkit-font-smoothing: antialiased;
+  line-height: 1.1;
 }
 
 /* TAGLINE */
@@ -208,6 +211,7 @@ body {
     padding: 1.8rem;
   }
 }
+
 
 
 

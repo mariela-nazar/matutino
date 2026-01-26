@@ -27,11 +27,13 @@ body {
 /* LOGO CON BODONI MODA */
 .logo {
   font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  font-size: 2.8rem;
-  color: #2c3e50; /* Gris oscuro */
+  font-weight: 600; /* Peso suficiente pero no demasiado grueso */
+  letter-spacing: 0.22em; /* Un poquito menos de espacio */
+  font-size: 3rem; /* Un poco más grande */
+  color: #1a252f; /* Casi negro, buen contraste */
   margin-bottom: 0.3rem;
+  text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.1);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* TAGLINE */
@@ -203,3 +205,4 @@ body {
     padding: 1.8rem;
   }
 }
+

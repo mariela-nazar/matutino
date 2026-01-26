@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +10,10 @@ body {
   background-color: #f6f6f4;
   color: #2b2b2b;
   line-height: 1.6;
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER SIN FONDO OSCURO */
+/* CABECERA Y LOGOTIPO */
 .site-header {
   padding: 2.5rem 2rem 1rem 2rem;
   text-align: center;
@@ -24,18 +24,18 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* LOGO CON ALICE - MINÚSCULAS, TAMAÑO Y TRACKING CORREGIDOS */
+/* LOGO CON ALICE - MINÚSCULAS */
 .logo {
   font-family: 'Alice', serif;
-  font-size: 4.5rem; /* Más grande para mejor presencia */
-  color: #707070; /* Gris exacto que te gustó */
+  font-size: 4.5rem;
+  color: #707070;
   font-weight: 400;
-  letter-spacing: 0.01em; /* Tracking sutil positivo */
+  letter-spacing: 0.01em;
   display: block;
-  line-height: 0.85; /* Compacto pero legible */
-  margin-bottom: 0.2rem; /* Menos espacio abajo */
-  text-transform: lowercase; /* Forzar minúsculas */
-  margin-top: 0.5rem; /* Un poco más abajo del borde superior */
+  line-height: 0.85;
+  margin-bottom: 0.2rem;
+  text-transform: lowercase;
+  margin-top: 0.5rem;
 }
 
 .tagline {
@@ -43,14 +43,14 @@ body {
   font-weight: 300;
   font-size: 0.9rem;
   color: #a0a0a0;
-  letter-spacing: 0.12em; /* Reducido para alinearse mejor */
-  margin-top: -0.2rem; /* Sube un poco hacia el logo */
+  letter-spacing: 0.12em;
+  margin-top: -0.2rem;
   margin-bottom: 1rem;
 }
 
-/* NAVEGACIÓN CENTRADA */
+/* NAVEGACIÓN */
 .main-nav {
-  padding: 0.8rem 0;
+  padding: 1rem 0;
   margin-top: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -59,8 +59,8 @@ body {
 .main-nav a {
   margin: 0 1.2rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  color: #4a5f5a;
+  font-size: 0.85rem;
+  color: #5a6b67;
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s;
@@ -85,7 +85,7 @@ body {
   width: 100%;
 }
 
-/* LAYOUT - REDUCIENDO ESPACIO BLANCO */
+/* LAYOUT - 2 COLUMNAS */
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -95,13 +95,13 @@ body {
   margin: 0 auto;
 }
 
-/* COLUMNA IZQUIERDA - SUBIDA */
+/* COLUMNA IZQUIERDA - AZUL #0E4196 */
 .left-column .box {
   background: #ffffff;
   padding: 1.8rem;
   margin-bottom: 1.8rem;
   border-radius: 4px;
-  border-left: 4px solid #009966; /* VERDE SOLICITADO */
+  border-left: 4px solid #0E4196;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: transform 0.3s;
 }
@@ -127,49 +127,62 @@ body {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: #3f5f7a;
+  color: #0E4196;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .read-more:hover {
-  color: #2c3e50;
+  color: #0a3276;
 }
 
-/* COLUMNA DERECHA - MATUTINO */
+/* COLUMNA DERECHA - MATUTINO (CON MEJORAS DE GEMINI) */
 .matutino {
   background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 4px;
-  border-top: 4px solid #990033; /* ACENTO MATUTINO SOLICITADO */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 3rem;
+  border-radius: 2px;
+  border-top: 4px solid #990033;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .matutino h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 1.2rem;
-  color: #2c3e50;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
 }
 
 .matutino p {
-  color: #34495e;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.7;
+  color: #3e4f5f;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
 .matutino .read-more {
-  margin-top: 1.5rem;
+  display: inline-block;
+  margin-top: 2rem;
   color: #990033;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
 }
 
 .matutino .read-more:hover {
-  color: #cc0033;
+  border-bottom: 1px solid #990033;
+  color: #990033;
 }
 
-/* FOOTER SIN FONDO OSCURO */
+/* FOOTER */
 .site-footer {
   padding: 1.5rem 2rem;
   font-size: 0.8rem;
@@ -196,7 +209,7 @@ body {
   }
   
   .logo {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
   }
   
   .main-nav a {
@@ -205,7 +218,16 @@ body {
   }
   
   .matutino {
-    padding: 1.8rem;
+    padding: 2.5rem;
+  }
+  
+  .matutino h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .matutino p {
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
 }
-

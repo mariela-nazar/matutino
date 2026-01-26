@@ -95,13 +95,14 @@ body {
   margin: 0 auto;
 }
 
-/* COLUMNA IZQUIERDA - AZUL #0E4196 */
+/* COLUMNA IZQUIERDA - VERDE #006666 */
 .left-column .box {
   background: #ffffff;
   padding: 1.8rem;
   margin-bottom: 1.8rem;
+  margin-top: 0; /* Elimina cualquier margen residual superior */
   border-radius: 4px;
-  border-left: 4px solid #0E4196;
+  border-left: 4px solid #006666; /* CAMBIADO: #0E4196 → #006666 */
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: transform 0.3s;
 }
@@ -127,23 +128,25 @@ body {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: #0E4196;
+  color: #006666; /* CAMBIADO para coincidir con el borde */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .read-more:hover {
-  color: #0a3276;
+  color: #004d4d; /* VERDE MÁS OSCURO EN HOVER */
 }
 
-/* COLUMNA DERECHA - MATUTINO (CON MEJORAS DE GEMINI) */
+/* COLUMNA DERECHA - MATUTINO (CON PADDING SUPERIOR REDUCIDO) */
 .matutino {
   background: #ffffff;
-  padding: 3rem;
+  /* Reducimos el padding superior de 3rem a 1.5rem */
+  padding: 1.5rem 3rem 3rem 3rem;
   border-radius: 2px;
   border-top: 4px solid #990033;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-top: 0; /* Asegura alineación superior */
 }
 
 .matutino h2 {
@@ -218,7 +221,7 @@ body {
   }
   
   .matutino {
-    padding: 2.5rem;
+    padding: 1.5rem 2rem 2.5rem 2rem;
   }
   
   .matutino h2 {

@@ -256,9 +256,24 @@ body {
     font-size: 3.5rem;
   }
 
+  /* === NAVEGACIÓN MÓVIL CORREGIDA === */
+  /* 1. Oculta "Matutino" del menú en móviles */
+  .main-nav a:nth-child(3) {
+    display: none;
+  }
+  
+  /* 2. Centra y mejora los 2 enlaces restantes */
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+  }
+  
   .main-nav a {
-    margin: 0 0.8rem;
-    font-size: 0.85rem;
+    margin: 0; /* Quita el margin: 0 0.8rem; anterior */
+    font-size: 0.9rem; /* Un poquito más grande */
+    padding: 0.5rem 0;
   }
 
   .matutino {

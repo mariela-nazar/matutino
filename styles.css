@@ -172,6 +172,7 @@ body {
 
 /* ===== TIPOGRAFÍA IGUALADA ===== */
 .matutino > div > p:/* ===== ESTILOS PARA LOS SUBTÍTULOS (INTERNACIONAL, NACIONAL, etc.) ===== */
+/* REEMPLAZA la regla actual de .matutino > div > span por esta: */
 .matutino > div > span {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -182,6 +183,9 @@ body {
   margin-bottom: 0.4rem;
   font-size: 0.88rem;
   -webkit-font-smoothing: antialiased;
+  /* NUEVO: resaltado sutil */
+  padding: 0.2rem 0;
+  border-bottom: 1px solid #eaeaea; /* línea sutil debajo */
 }
 
 /* ===== SEPARACIÓN ENTRE BLOQUES DE NOTICIAS ===== */
@@ -291,6 +295,7 @@ body {
     line-height: 1.7;
   }
 }
+
 
 
 

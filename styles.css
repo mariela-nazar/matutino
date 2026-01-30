@@ -170,9 +170,16 @@ body {
   padding-bottom: 12px;
 }
 
-/* ===== TIPOGRAFÍA IGUALADA ===== */
-.matutino > div > p:/* ===== ESTILOS PARA LOS SUBTÍTULOS (INTERNACIONAL, NACIONAL, etc.) ===== */
-/* REEMPLAZA la regla actual de .matutino > div > span por esta: */
+/* ===== TIPOGRAFÍA IGUALADA PARA PÁRRAFOS DE MATUTINO ===== */
+.matutino > div > p {
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== ESTILOS PARA LOS SUBTÍTULOS (INTERNACIONAL, NACIONAL, etc.) ===== */
 .matutino > div > span {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -183,22 +190,13 @@ body {
   margin-bottom: 0.4rem;
   font-size: 0.88rem;
   -webkit-font-smoothing: antialiased;
-  /* NUEVO: resaltado sutil */
   padding: 0.2rem 0;
-  border-bottom: 1px solid #eaeaea; /* línea sutil debajo */
+  border-bottom: 1px solid #eaeaea;
 }
 
 /* ===== SEPARACIÓN ENTRE BLOQUES DE NOTICIAS ===== */
 .matutino > div {
   margin-bottom: 1.2rem;
-}
-
-{
-  color: #34495e;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  -webkit-font-smoothing: antialiased;
 }
 
 .matutino .read-more {
@@ -234,16 +232,14 @@ body {
 /* ===== RESPONSIVE - MÓVILES (Matutino primero) ===== */
 @media (max-width: 768px) {
   .layout {
-    /* Cambia el orden: segunda columna primero (Matutino) */
     grid-template-columns: 1fr;
     grid-template-areas: 
       "matutino"
       "contenido";
     gap: 1.5rem;
-    padding: 1rem 1.5rem 2rem 1.5rem;
+    padding: 0.5rem 1.5rem 2rem 1.5rem; /* REDUCIDO de 1rem a 0.5rem arriba */
   }
 
-  /* Asigna áreas a las columnas */
   .right-column {
     grid-area: matutino;
   }
@@ -252,21 +248,21 @@ body {
     grid-area: contenido;
   }
 
+  /* ELIMINA LA LÍNEA EXTRA Y REDUCE ESPACIO */
   .site-header {
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 0.5rem 1rem; /* REDUCIDO: era 1rem abajo, ahora 0.5rem */
+    border-bottom: none !important; /* ← ESTO ELIMINA LA LÍNEA EXTRA */
   }
 
   .logo {
     font-size: 3.5rem;
   }
 
-  /* === NAVEGACIÓN MÓVIL CORREGIDA === */
-  /* 1. Oculta "Matutino" del menú en móviles */
+  /* === NAVEGACIÓN MÓVIL === */
   .main-nav a:nth-child(3) {
     display: none;
   }
   
-  /* 2. Centra y mejora los 2 enlaces restantes */
   .main-nav {
     display: flex;
     justify-content: center;
@@ -275,13 +271,15 @@ body {
   }
   
   .main-nav a {
-    margin: 0; /* Quita el margin: 0 0.8rem; anterior */
-    font-size: 0.9rem; /* Un poquito más grande */
+    margin: 0;
+    font-size: 0.9rem;
     padding: 0.5rem 0;
   }
 
+  /* SUBIR EL RECUADRO MATUTINO */
   .matutino {
-    padding: 1.5rem 2rem 2.5rem 2rem;
+    padding: 1rem 2rem 2rem 2rem; /* REDUCIDO: era 1.5rem arriba, ahora 1rem */
+    margin-top: 0;
   }
 
   .matutino h2 {
@@ -295,13 +293,3 @@ body {
     line-height: 1.7;
   }
 }
-
-
-
-
-
-
-
-
-
-
